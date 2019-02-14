@@ -9,7 +9,7 @@
 %-----------------------------------------------------
 
 
-disp('---------Fishing solving problem 1--------');
+disp('---------Finishing solving problem 1--------');
 A = imread('peppers.bmp');
 figure,imshow(A),title('RGB Original Image');
 pause;
@@ -18,7 +18,7 @@ A1= ReduceGrayScale(A);
 figure,imshow(A1);
 pause;
 
-disp('---------Fishing solving problem 2--------');
+disp('---------Finishing solving problem 2--------');
 B=rgb2gray(A);
 TB=transpose(B);
 subplot(1,2,1),imshow(B),title('B')
@@ -29,12 +29,12 @@ disp('Mean intensity value of B:'),disp( mean(mean(B)));
 disp('Median intensity value of B:'),disp( median(median(B)));
 pause;
 
-disp('---------Fishing solving problem 3--------');
+disp('---------Finishing solving problem 3--------');
 C =double(B)/double(max(max(B)));
 figure,imshow(C), title('Normalize Gray Scale Image');
 pause;
 
-disp('---------Fishing solving problem 4--------');
+disp('---------Finishing solving problem 4--------');
 D1=C.^0.25;
 D2=C.^1.25;
 D=[D1,D2];
@@ -44,7 +44,7 @@ disp('Explain: power .25 is decrease picture intensity until 1/4 left; while, po
 imwrite(D2,'Mingming_D2.jpg');
 pause;
 
-disp('---------Fishing solving problem 5--------');
+disp('---------Finishing solving problem 5--------');
 threshold = 0.3;
 bw1 =zeros(size(B));
 bw1(C>threshold) =1;
@@ -56,12 +56,12 @@ subplot(1,2,1),imshow(bw1),title('My Method');
 subplot(1,2,2),imshow(bw2),title("Matlab method");
 pause;
 
-disp('---------Fishing solving problem 6--------');
+disp('---------Finishing solving problem 6--------');
 close all;
 clear;
 
 
-disp('---------Fishing solving problem 7 Fuction ReduceGrayScale--------');
+disp('---------Finishing solving problem 7 Fuction ReduceGrayScale--------');
     function img_output =ReduceGrayScale(img_input)
         imgsize = size(img_input);
         img_output = uint8(zeros(imgsize(1),imgsize(2)));
